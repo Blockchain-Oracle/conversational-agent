@@ -8,8 +8,13 @@ export default defineConfig({
       output: {
         entryFileNames: 'main.js',
       },
+      external: [
+        'electron',
+        'better-sqlite3'
+      ],
     },
     outDir: '.vite/build',
+    target: 'node18',
   },
   resolve: {
     conditions: ['node'],
